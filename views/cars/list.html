@@ -8,8 +8,10 @@
     <a href="#">{{car.dt}}</a>
   </header>
   <div class="pContain">
-      <img ng-src="{{car.image}}" alt="" />
-
+      <img ng-src="{{car.cover}}" alt="" />
+      <div class="description">
+        <p>{{car.description}}</p>
+      </div>
       <div class="book">
         <span ng-click="bookCar(car)">&#9825;</span>
       </div>

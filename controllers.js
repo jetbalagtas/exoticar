@@ -9,12 +9,16 @@
     .controller('CarsController', function ($scope, ExoticarService, BookService, $routeParams) {
 
       ExoticarService.getExoticars().success(function (cars) {
-
         $scope.cars = cars;
       });
       BookService.getBookings().success(function (bookedCars) {
         $scope.bookedCars = bookedCars;
       });
+      $scope.addExoticar = function (newExoticar) {
+        console.log(newExoticar);
+        ExoticarService.createExoticar(newExoticar);
+        $scope.greatExoticars = cars;
+      };
       $scope.bookCar = function (car) {
         BookService.addBookedCar(car);
       };

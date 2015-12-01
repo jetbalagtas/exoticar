@@ -10,7 +10,15 @@
 
       ExoticarService.getExoticars().success(function (cars) {
         $scope.cars = cars;
+        console.log('this is showing the list of cars');
       });
+      if($routeParams.carId) {
+        ExoticarService.getSingleCar($routeParams.carId).success(function(singleCar) {
+          console.log("SINGLE",singleCar);
+          $scope.car = singleCar;
+          console.log('this is a single car: ', $scope.singleCar);
+        });
+      }
       BookService.getBookings().success(function (bookedCars) {
         $scope.bookedCars = bookedCars;
       });
@@ -29,10 +37,5 @@
         console.log('bookedCar: ',$scope.bookedCar);
       });
       }
-
-      // ExoticarService.getSingleCar($routeParams.carId).success(function (car) {
-      //   $scope.singleCar = car;
-      //   console.log('single', $scope.singleCar);
-      // });
     });
 })();

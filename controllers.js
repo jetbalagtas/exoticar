@@ -6,7 +6,7 @@
     .controller('MainController', function ($scope) {
 
     })
-    .controller('CarsController', function ($scope, ExoticarService, BookService, $routeParams) {
+    .controller('CarsController', function ($scope, $location, ExoticarService, BookService, $routeParams) {
 
       ExoticarService.getExoticars().success(function (cars) {
         $scope.cars = cars;
@@ -17,7 +17,8 @@
       $scope.addExoticar = function (newExoticar) {
         console.log(newExoticar);
         ExoticarService.createExoticar(newExoticar);
-        $scope.greatExoticars = Exoticars;
+        // $scope.greatExoticars = Exoticars;
+        $location.path("/cars");
       };
       $scope.bookCar = function (car) {
         BookService.addBookedCar(car);

@@ -1,14 +1,11 @@
 <article ng-repeat="car in bookedCars" class="car" data-id="{{car.id}}">
-  <header >
-    <img src="http://www.fillmurray.com/50/50" alt="" />
-
+  <header>
     <div class="">
       <a href="#/bookings/{{car._id}}">{{car.title}}</a>
     </div>
-    <a href="#">{{car.dt}}</a>
   </header>
   <div class="pContain">
-      <img ng-src="{{car.image}}" alt="" />
+      <img ng-src="{{car.cover}}" alt="" />
 
   </div>
 

@@ -17,7 +17,7 @@
       $scope.addExoticar = function (newExoticar) {
         console.log(newExoticar);
         ExoticarService.createExoticar(newExoticar);
-        $scope.greatExoticars = cars;
+        $scope.greatExoticars = Exoticars;
       };
       $scope.bookCar = function (car) {
         BookService.addBookedCar(car);
@@ -27,11 +27,11 @@
         $scope.bookedCar = bookedCar;
         console.log('bookedCar: ',$scope.bookedCar);
       });
-    }
+      }
 
-      // ExoticarService.getSinglePhoto($routeParams.photoId).success(function (photo) {
-      //   $scope.singlePhoto = photo;
+      // ExoticarService.getSingleCar($routeParams.carId).success(function (car) {
+      //   $scope.singleCar = car;
+      //   console.log('single', $scope.singleCar);
       // });
-      // console.log('single', $scope.singlePhoto);
     });
 })();

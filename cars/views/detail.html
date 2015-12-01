@@ -1,15 +1,20 @@
-<article class="car" data-id="{{singleCar.id}}">
+<article class="car" data-id="{{car._id}}">
   <header >
-    <img src="http://www.fillmurray.com/50/50" alt="" />
+    <!-- <img src="http://www.fillmurray.com/50/50" alt="" /> -->
 
     <div class="">
-      {{singleCar.title}}
+      <p>{{car.title}}</p>
     </div>
-    <a href="#">{{singleCar.dt}}</a>
+    <!-- <a href="#">{{car.dt}}</a> -->
   </header>
   <div class="pContain">
-      <img ng-src="{{singleCar.image}}" alt="" />
-
+      <img ng-src="{{car.cover}}" alt="" />
+      <div class="description">
+        <p>{{car.description}}</p>
+      </div>
+      <!-- <div class="book">
+        <span ng-click="bookCar(car)">&#9825;</span>
+      </div> -->
   </div>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

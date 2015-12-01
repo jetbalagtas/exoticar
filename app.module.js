@@ -11,40 +11,37 @@
     .config(function ($routeProvider) {
       $routeProvider
         .when('/', {
-          templateUrl: 'views/home.html',
+          templateUrl: 'home.html',
           controller: 'MainController'
         })
         .when('/cars', {
-          templateUrl: 'views/cars/list.html',
+          templateUrl: 'cars/views/list.html',
           controller: 'CarsController'
         })
         .when('/cars/:carId', {
-          templateUrl: 'views/cars/detail.html',
+          templateUrl: 'cars/views/detail.html',
           controller: 'CarsController'
         })
         .when('/cars/:carId/edit', {
-          templateUrl: 'views/cars/edit.html',
+          templateUrl: 'cars/views/edit.html',
           controller: 'CarsController'
         })
         .when('/addExoticar', {
-          templateUrl: 'views/cars/create.html',
+          templateUrl: 'cars/views/create.html',
           controller: 'CarsController'
         })
         .when('/mygarage', {
-          templateUrl: 'views/mygarage/list.html',
+          templateUrl: 'mygarage/views/list.html',
           controller: 'CarsController'
         })
         .when('/mygarage/:bookCarId', {
-          templateUrl: 'views/mygarage/detail.html',
+          templateUrl: 'mygarage/views/detail.html',
           controller: 'CarsController'
         })
-        .when('/addBookedCar', {
-          templateUrl: 'views/mygarage/create.html',
-          controller: 'CarsController'
+        .when('/404', {
+          templateUrl: '404.html'
         })
-        .when('/mygarage/:bookCarId/edit', {
-          templateUrl: 'views/mygarage/edit.html',
-          controller: 'CarsController'
+        .otherwise({ redirectTo: '/404'
         });
     });
 

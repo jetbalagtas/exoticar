@@ -1,13 +1,11 @@
-<article class="car" data-id="{{bookedCar.id}}">
+<article class="car" data-id="{{bookedCar._id}}">
   <header >
-    <img src="http://www.fillmurray.com/50/50" alt="" />
-
     <div class="">
       {{bookedCar.title}}
     </div>
   </header>
   <div class="pContain">
-      <img ng-src="{{bookedCar.image}}" alt="" />
+      <img ng-src="{{bookedCar.cover}}" alt="" />
       <div class="description">
         <p>{{car.description}}</p>
       </div>

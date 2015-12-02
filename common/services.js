@@ -31,13 +31,13 @@
       var getBookedCars = function () {
         return $http.get(url);
       };
-      var addBookedCar = function (car) {
-        $http.post(url, car).success(function (res) {
-          console.log(res);
-        });
-      };
-      var getSingleCar = function (carId) {
-        console.log('HELLO');
+      // var addBookedCar = function (car) {
+      //   $http.post(url, car).success(function (res) {
+      //     console.log(res);
+      //   });
+      // };
+      var getBookedCar = function (carId) {
+        console.log('JELLO');
         var newUrl = url + '/' + carId;
         console.log(newUrl);
         return $http.get(newUrl);
@@ -53,11 +53,10 @@
         });
       };
       return {
-        getBookings: getBookedCars,
-        getSingleCar: getSingleCar,
+        getBookedCars: getBookedCars,
         deleteCar: deleteBookedCar,
         updateBookedCar: updateBookedCar,
-        addBookedCar: addBookedCar
+        getBookedCar: getBookedCar,
       };
 
     });

@@ -16,9 +16,10 @@
           console.log('this is a bookedCar: ', $scope.bookedCar);
         });
       }
-      $scope.bookedCar = function (car) {
+      $scope.bookedCar = function (bookedcar) {
         console.log(bookedCar);
-        BookService.getBookedCar(car);
+        BookService.getBookedCar(bookedcar);
+        $location.path("/mygarage/:bookedCarId");
       };
 });
 }());
